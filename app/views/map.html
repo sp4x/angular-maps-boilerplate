@@ -1,0 +1,13 @@
+<ui-gmap-google-map
+  center='map.center'
+  zoom='map.zoom'
+  bounds='map.bounds'
+  events="map.events"
+  options="map.options"
+  >
+  <ui-gmap-marker ng-repeat="pin in map.markers"
+          idKey='1'
+          coords='pin.location'
+          >
+  </ui-gmap-marker>
+</ui-gmap-google-map>
