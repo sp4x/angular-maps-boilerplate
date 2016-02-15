@@ -34,7 +34,6 @@ angular
   .config(function(uiGmapGoogleMapApiProvider) {
     uiGmapGoogleMapApiProvider.configure({
       key: 'AIzaSyDwLZRKlvsqJWk9TE561_IZ-9GXb-EaYJQ',
-      v: '3.20', //defaults to latest 3.X anyhow
       libraries: 'weather,geometry,visualization'
     });
   });

@@ -20,16 +20,8 @@ angular.module('esmapsApp')
 
     map.events = {
       'idle': function(mapObj) {
-        var bounds = mapObj.getBounds();
-        var top_left = {
-          lat: bounds.getNorthEast().G,
-          lon: bounds.getSouthWest().K,
-        }
-        var bottom_right = {
-          lat: bounds.getSouthWest().G,
-          lon: bounds.getNorthEast().K,
-        }
-        PointSearch.boundingBox(top_left, bottom_right).then(function(
+        var bounds = mapObj.getBounds().toJSON();
+        PointSearch.boundingBox(bounds).then(function(
           result) {
           map.markers = result;
         });
