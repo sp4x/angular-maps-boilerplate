@@ -1,10 +1,7 @@
 angular.module('esmapsApp')
-  .service('PointSearch', function(esFactory) {
+  .service('PointSearch', function(esFactory, esConfig) {
 
-    var client = esFactory({
-      host: 'localhost:9200',
-      apiVersion: '1.2'
-    });
+    var client = esFactory(esConfig);
 
     var query_match_all = {
       "filtered": {

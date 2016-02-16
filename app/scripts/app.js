@@ -15,6 +15,10 @@ angular
     'elasticsearch',
     'uiGmapgoogle-maps'
   ])
+  .constant("esConfig", {
+    host: '52.29.170.191:9200',
+    apiVersion: '1.2'
+  })
   .config(function($routeProvider) {
     $routeProvider
       .when('/', {
